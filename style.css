@@ -1,0 +1,85 @@
+i {
+    font-size: 30px;
+}
+
+body {
+    background: linear-gradient(#ffffff, #9198e5);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.player {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    background-color: rgb(104, 52, 188);
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 18px 18px 18px 0px rgb(0 0 0 / 23%);
+}
+
+.player * {
+    cursor: pointer;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.wrapper {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.equalizer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 400px;
+    width: 600px;
+    background-color: rgb(104, 52, 188);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 18px 18px 18px 0px rgb(0 0 0 / 23%);
+}
+
+.bar {
+    animation: none;
+    display: inline-block;
+    width: 30px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 3px;
+}
+
+.active .bar {
+    animation: changingBarPosition linear infinite;
+}
+
+@keyframes changingBarPosition {
+    0% {
+        height: 25%;
+    }
+
+    25% {
+        height: 50%;
+    }
+
+    50% {
+        height: 20%;
+    }
+
+    75% {
+        height: 45%;
+    }
+
+    100% {
+        height: 25%;
+    }
+}
